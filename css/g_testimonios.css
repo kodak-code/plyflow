@@ -1,0 +1,48 @@
+.testimonios {
+    padding: 60px 0;
+}
+
+.testimonio-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.testimonio-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.testimonio-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.testimonio-text {
+    font-size: 1rem;
+    color: #555;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.usuario-nombre {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.usuario-profesion {
+    color: #777;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 767px) {
+    .testimonio-card {
+        padding: 15px;
+    }
+}

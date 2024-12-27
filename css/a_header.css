@@ -1,0 +1,28 @@
+/* cuerpo */
+nav {
+    background-color: #26598f;
+}
+
+nav a {
+    color: white !important;
+}
+
+body {
+    background-color: #dad8f0;
+    margin-top: 62px;
+}
+
+
+/* Header */
+.container a {
+    font-family: 'Poppins', sans-serif;
+    font-size: x-large;
+}
+
+.navbar-nav .nav-item {
+    margin-right: 15px;
+}
+
+.navbar-nav .nav-item:last-child {
+    margin-right: 0;
+}

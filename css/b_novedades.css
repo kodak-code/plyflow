@@ -1,0 +1,127 @@
+/* Seccion swiper */
+.swiper {
+    width: 100%;
+    padding: 20px 0;
+}
+
+.pt-10 {
+    padding-top: 10px !important;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+/* Botones de navegación */
+.swiper-button-prev,
+.swiper-button-next {
+    background-color: #26598f;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 16px;
+    color: #fff;
+}
+
+/* Texto dentro de cada slide */
+.swiper-slide .p-3 {
+    margin: 0;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* Estilo general para las tarjetas */
+.tarjeta-libro {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.novedades {
+    opacity: 0.2;
+    transition: opacity 2s ease;
+}
+
+/* Clase para cuando la sección es visible */
+.novedades.visible {
+    opacity: 1;
+}
+
+#carouselExampleIndicators {
+    max-height: 600px;
+    overflow: hidden;
+}
+
+#carouselExampleIndicators .carousel-item img {
+    max-height: 600px;
+    width: auto;
+    height: auto;
+    margin: auto;
+    display: block;
+}
+
+/* Ajustar la altura del slider */
+.carousel-indicators button {
+    position: relative;
+}
+
+.timer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: transparent;
+    display: none;
+    animation: none;
+}
+
+.carousel-indicators button.active .timer {
+    display: block;
+    background-color: #007bff;
+    animation: countdown 2s linear infinite;
+}
+
+
+@keyframes countdown {
+    0% {
+        background-color: #007bff;
+        width: 20px;
+        height: 20px;
+    }
+
+    50% {
+        background-color: #ff5733;
+        width: 15px;
+        height: 15px;
+    }
+
+    100% {
+        background-color: transparent;
+        width: 20px;
+        height: 20px;
+    }
+}

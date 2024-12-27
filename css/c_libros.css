@@ -1,0 +1,56 @@
+/* Contenedor para las imágenes del libro */
+.contenedor-imagen-libro {
+    width: 260px;
+    height: 360px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+}
+
+/* Imagen de los libros */
+.imagen-libro {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Título de los libros */
+.titulo-libro {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Precio de los libros */
+.precio-libro {
+    font-size: 1.2rem;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+/* Botón de comprar */
+.btn-comprar {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-comprar:hover {
+    background-color: #218838;
+}
+
+/* Tarjeta del libro */
+.tarjeta-libro:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}

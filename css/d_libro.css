@@ -1,0 +1,112 @@
+/* Estilo para los dos libros */
+.libros-imagenes .libro {
+    width: 250px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s ease-in-out;
+    position: relative;
+    opacity: 0;
+    animation: acomodarLibros 10s cubic-bezier(0.25, 1.75, 0.75, 1) forwards;
+}
+
+/* Añadir margen inferior en pantallas pequeñas */
+@media (max-width: 768px) {
+    .libros-imagenes .libro {
+        margin-bottom: 20px;
+    }
+
+    .libros-imagenes {
+        margin-bottom: 40px;
+    }
+}
+
+/* Posición del libro azul */
+.libros-imagenes .libro-azul {
+    z-index: 2;
+    top: 0;
+    left: -300px;
+    animation: acomodarLibros 10s cubic-bezier(0.25, 1.75, 0.75, 1) forwards;/
+}
+
+/* Posición del libro verde */
+.libros-imagenes .libro-verde {
+    z-index: 1;
+    top: 0;
+    left: -200px;
+    transform: rotate(15deg);
+    opacity: 0.8;
+    animation: acomodarLibrosVerde 10s cubic-bezier(0.25, 1.75, 0.75, 1) forwards;
+}
+
+/* Animación para acomodar los libros */
+@keyframes acomodarLibros {
+    0% {
+        top: -150px;
+        left: -300px;
+        opacity: 0;
+    }
+
+    30% {
+        top: 0;
+        left: 0;
+        opacity: 0.3;
+    }
+
+    70% {
+        top: 0;
+        left: 0;
+        opacity: 0.8;
+    }
+
+    100% {
+        top: 0;
+        left: 0;
+        opacity: 1;
+    }
+}
+
+/* Animación especial para el libro verde */
+@keyframes acomodarLibrosVerde {
+    0% {
+        top: -200px;
+        left: -200px;
+        opacity: 0;
+    }
+
+    50% {
+        top: 0;
+        left: -100px;
+        opacity: 0.3;
+    }
+
+    100% {
+        top: 0;
+        left: -100px;
+        opacity: 1;
+    }
+}
+
+/* Efecto al pasar el ratón */
+.libros-imagenes .libro:hover {
+    transform: scale(1.2) rotate(0) !important;
+    z-index: 3 !important;
+}
+
+/* Estilos de los textos */
+.titulo-descripcion {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.texto-descripcion {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #444;
+}
+
+.texto-secundario {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #666;
+}

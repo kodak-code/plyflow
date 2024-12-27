@@ -1,0 +1,32 @@
+.sobre-nosotros {
+    padding: 60px 0;
+}
+
+.sobre-nosotros .titulo {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.sobre-nosotros .descripcion {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.sobre-nosotros img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+@media (max-width: 767px) {
+    .sobre-nosotros .titulo {
+        font-size: 1.5rem;
+    }
+
+    .sobre-nosotros .descripcion {
+        font-size: 0.95rem;
+    }
+}
