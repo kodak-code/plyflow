@@ -1,6 +1,15 @@
 .sobre-nosotros {
     padding: 60px 0;
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity 1.5s ease, transform 1.5s ease;
 }
+
+.sobre-nosotros.show-nosotros {
+    opacity: 1;
+    transform: translateX(0);
+}
+
 
 .sobre-nosotros .titulo {
     font-size: 2rem;

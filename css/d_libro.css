@@ -1,45 +1,31 @@
-/* Estilo para los dos libros */
+/* LIBROS IMPORTANTES */
 .libros-imagenes .libro {
     width: 250px;
     height: auto;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: all 0.5s ease-in-out;
     position: relative;
     opacity: 0;
-    animation: acomodarLibros 10s cubic-bezier(0.25, 1.75, 0.75, 1) forwards;
 }
 
-/* Añadir margen inferior en pantallas pequeñas */
-@media (max-width: 768px) {
-    .libros-imagenes .libro {
-        margin-bottom: 20px;
-    }
-
-    .libros-imagenes {
-        margin-bottom: 40px;
-    }
-}
-
-/* Posición del libro azul */
+/* Posicion del libro azul */
 .libros-imagenes .libro-azul {
     z-index: 2;
     top: 0;
     left: -300px;
-    animation: acomodarLibros 10s cubic-bezier(0.25, 1.75, 0.75, 1) forwards;/
+    animation: none;
 }
 
-/* Posición del libro verde */
+/* Posicion del libro verde */
 .libros-imagenes .libro-verde {
     z-index: 1;
     top: 0;
     left: -200px;
     transform: rotate(15deg);
-    opacity: 0.8;
-    animation: acomodarLibrosVerde 10s cubic-bezier(0.25, 1.75, 0.75, 1) forwards;
+    animation: none;
 }
 
-/* Animación para acomodar los libros */
+/* Animacion para acomodar los libros */
 @keyframes acomodarLibros {
     0% {
         top: -150px;
@@ -66,7 +52,7 @@
     }
 }
 
-/* Animación especial para el libro verde */
+/* Animacion especial para el libro verde */
 @keyframes acomodarLibrosVerde {
     0% {
         top: -200px;
@@ -87,7 +73,33 @@
     }
 }
 
-/* Efecto al pasar el ratón */
+/* Animacion para el texto de la derecha (aparece lentamente de izquierda a derecha) */
+@keyframes escribirTexto {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Animacion para el boton (aparece lentamente de izquierda a derecha) */
+@keyframes aparecerBoton {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Efecto al pasar el raton */
 .libros-imagenes .libro:hover {
     transform: scale(1.2) rotate(0) !important;
     z-index: 3 !important;
@@ -97,16 +109,43 @@
 .titulo-descripcion {
     font-size: 2.5rem;
     font-weight: bold;
+    opacity: 0;
+    transform: translateX(-100%);
 }
 
 .texto-descripcion {
     font-size: 1.2rem;
     line-height: 1.8;
     color: #444;
+    opacity: 0;
+    transform: translateX(-100%);
 }
 
 .texto-secundario {
     font-size: 1rem;
     line-height: 1.5;
     color: #666;
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+/* Estilo para el boton */
+.btn {
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: aparecerBoton 2s ease-out forwards;
+}
+
+/* Activar animacion cuando la seccion es visible */
+.texto-descripcion.visible,
+.texto-secundario.visible,
+.titulo-descripcion.visible {
+    animation: escribirTexto 2s ease-out forwards;
+}
+
+@media (max-width: 768px) {
+    .libro {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
 }

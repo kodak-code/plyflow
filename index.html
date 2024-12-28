@@ -21,12 +21,12 @@
     <title>Plyflow</title>
 
     <link rel="stylesheet" href="/css/a_header.css">
-    <link rel="stylesheet" href="/css/b_novedades.css">
-    <link rel="stylesheet" href="/css/c_libros.css">
+    <link rel="stylesheet" href="/css/b_slider.css">
+    <link rel="stylesheet" href="/css/c_novedades.css">
     <link rel="stylesheet" href="/css/d_libro.css">
-    <link rel="stylesheet" href="/css/e_nosotros.css">
-    <link rel="stylesheet" href="/css/f_contacto.css">
-    <link rel="stylesheet" href="/css/g_testimonios.css">
+    <link rel="stylesheet" href="/css/e_testimonios.css">
+    <link rel="stylesheet" href="/css/f_nosotros.css">
+    <link rel="stylesheet" href="/css/g_contacto.css">
     <link rel="stylesheet" href="/css/h_footer.css">
     <script src="scripts.js" defer></script>
 </head>
@@ -41,7 +41,7 @@
     <!-- NAVEGADOR FIJO -->
     <nav class="navbar navbar-expand-lg bg-opacity-50 fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="/">Plyflow</a>
+            <a href="/"><img src="/img/logopliflow.svg" alt="Logo" class="img-fluid svg-pequeno"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -67,7 +67,7 @@
     </nav>
 
     <!-- SLIDER ROTATIVO DEL INICIO -->
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-interval="2000" data-bs-ride="carousel">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-interval="5000" data-bs-ride="carousel">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
                 aria-current="true" aria-label="Slide 1">
@@ -87,33 +87,33 @@
 
             <div class="carousel-item active d-item">
                 <img src="/img/imagen1.webp" class="d-block w-100 d-img" alt="Bienvenida">
-                <div class="carousel-caption top-0 mt-4">
-                    <h1 class="display-1 fw-bolder text-capitalize">Plyfow</h1>
-                    <p class="mt-5 fs-3 text-uppercase">Menos ruido. Mas ideas.</p>
+                <div class="carousel-caption top-0 mt-5">
+                    <h1 class="display-1 fw-bolder text-capitalize animate-h1">Plyfow</h1>
+                    <p class="mt-5 fs-3 text-uppercase animate-p ">Menos ruido. Mas ideas.</p>
                 </div>
             </div>
 
             <div class="carousel-item d-item">
                 <img src="/img/imagenLibro2.jpg" class="d-block w-100 d-img" alt="saludables">
                 <div class="carousel-caption top-0 mt-4">
-                    <p class="mt-5 fs-3 text-uppercase">Descubre nuestra gran lista de libros</p>
-                    <h1 class="display-1 fw-bolder text-capitalize">¡Nos importa tu salud!</h1>
+                    <p class="mt-5 fs-3 text-uppercase animate-p">Descubre nuestra gran lista de libros</p>
+                    <h1 class="display-1 fw-bolder text-capitalize animate-h1">¡Nos importa tu lectura!</h1>
                 </div>
             </div>
 
             <div class="carousel-item d-item">
                 <img src="/img/imagenLibro3.jpg" class="d-block w-100 d-img" alt="masas">
                 <div class="carousel-caption top-0 mt-4">
-                    <p class="mt-5 fs-3 text-uppercase">Se un experto leyendo</p>
-                    <h1 class="display-1 fw-bolder text-capitalize">¡Aprende a Leer!</h1>
+                    <p class="mt-5 fs-3 text-uppercase animate-p">Se un experto leyendo</p>
+                    <h1 class="display-1 fw-bolder text-capitalize animate-h1">¡Aprende a Leer!</h1>
                 </div>
             </div>
 
             <div class="carousel-item d-item">
                 <img src="/img/imagenLibro4.png" class="d-block w-100 d-img" alt="masas">
                 <div class="carousel-caption top-0 mt-4">
-                    <p class="mt-5 fs-3 text-uppercase">Siempre hay tiempo para leer</p>
-                    <h1 class="display-1 fw-bolder text-capitalize">¡Elige tu momento!</h1>
+                    <p class="mt-5 fs-3 text-uppercase animate-p">Siempre hay tiempo para leer</p>
+                    <h1 class="display-1 fw-bolder text-capitalize animate-h1">¡Elige tu momento!</h1>
                 </div>
             </div>
 
@@ -233,7 +233,7 @@
     <section class="container my-5 libros-descripcion pt-0" id="libros-descripcion">
         <div class="row align-items-center">
             <!-- libros -->
-            <div class="col-md-6 d-flex justify-content-center libros-imagenes position-relative"
+            <div id="librosImportantes" class="col-md-6 d-flex justify-content-center libros-imagenes position-relative"
                 style="margin-top: -20px;">
                 <img src="/img/libro01.jpg" alt="Libro Azul" class="img-fluid libro libro-azul">
                 <img src="/img/libro02.webp" alt="Libro Verde" class="img-fluid libro libro-verde">
@@ -242,19 +242,19 @@
             <div class="col-md-6">
                 <h2 class="titulo-descripcion">Explora el fascinante mundo de la lectura</h2>
                 <p class="texto-descripcion">
-                    Sumérgete en una amplia colección de libros cuidadosamente seleccionados para brindarte momentos
+                    Sumérgete en una amplia coleccion de libros cuidadosamente seleccionados para brindarte momentos
                     inolvidables.
                     Desde historias cautivadoras y emocionantes hasta libros llenos de conocimiento y aprendizaje, cada
                     página es una puerta
-                    a un nuevo universo. Nuestra colección incluye títulos de autores reconocidos y también joyas
+                    a un nuevo universo. Nuestra coleccion incluye títulos de autores reconocidos y también joyas
                     escondidas
                     que están esperando ser descubiertas por ti.
                 </p>
                 <p class="texto-secundario">
-                    No importa si buscas inspiración, entretenimiento o conocimiento, tenemos algo especial para todos.
-                    Ven y encuentra tu próximo libro favorito con nosotros.
+                    No importa si buscas inspiracion, entretenimiento o conocimiento, tenemos algo especial para todos.
+                    Ven y encuentra tu proximo libro favorito con nosotros.
                 </p>
-                <button class="btn btn-primary mt-3">Ver más libros</button>
+                <button id="btnLibro" class="btn btn-primary mt-3">Ver más libros</button>
             </div>
         </div>
     </section>
@@ -269,7 +269,7 @@
                     <div class="testimonio-card">
                         <img src="img/usuario1.jpg" alt="Usuario 1" class="img-fluid rounded-circle">
                         <p class="testimonio-text">"Este servicio ha mejorado mi productividad, ¡me encanta!"</p>
-                        <h5 class="usuario-nombre">Ana López</h5>
+                        <h5 class="usuario-nombre">Ana Lopez</h5>
                         <p class="usuario-profesion">Diseñadora Gráfica</p>
                     </div>
                 </div>
@@ -304,14 +304,14 @@
                 <div class="col-md-6">
                     <h2 class="titulo">¿Quiénes Somos?</h2>
                     <p class="descripcion">
-                        Somos un equipo de profesionales apasionados por la tecnología y la innovación, dedicados a
+                        Somos un equipo de profesionales apasionados por la tecnología y la innovacion, dedicados a
                         ofrecer soluciones creativas y eficientes para cada uno de nuestros clientes. Nuestro objetivo
                         es ayudarte a alcanzar tus metas mediante el uso de herramientas modernas y estrategias
                         efectivas.
                     </p>
                     <p class="descripcion">
                         Con años de experiencia en la industria, nos enorgullece proporcionar un servicio cercano y
-                        personalizado. ¡Nos encantaría ser parte de tu próximo proyecto!
+                        personalizado. ¡Nos encantaría ser parte de tu proximo proyecto!
                     </p>
                 </div>
             </div>
@@ -326,7 +326,7 @@
                     <h2 class="titulo-contacto">¡Mantente en contacto con nosotros!</h2>
                     <p class="texto-contacto">
                         Resolvemos tus dudas y te ayudamos en lo que necesites. Visítanos, contáctanos por teléfono o
-                        encuentra más información en nuestras redes.
+                        encuentra más informacion en nuestras redes.
                     </p>
                 </div>
             </div>
@@ -353,7 +353,7 @@
             <!-- + INFO -->
             <div class="row text-center mb-4">
                 <div class="col-md-4">
-                    <h3 class="info-titulo">Horario de Atención</h3>
+                    <h3 class="info-titulo">Horario de Atencion</h3>
                     <p class="info-texto">Lunes a Viernes: 9 AM - 6 PM</p>
                     <p class="info-texto">Sábados: 10 AM - 4 PM</p>
                 </div>
@@ -364,7 +364,7 @@
                     </p>
                 </div>
                 <div class="col-md-4">
-                    <h3 class="info-titulo">Correo Electrónico</h3>
+                    <h3 class="info-titulo">Correo Electronico</h3>
                     <p class="info-texto">
                         <a href="mailto:info@ejemplo.com" class="contacto-enlace">info@ejemplo.com</a>
                     </p>
@@ -374,15 +374,10 @@
             <!-- UBICACION -->
             <div class="row align-items-center">
                 <div class="col-md-6 text-center">
-                    <img src="mapa.jpg" alt="Ubicación en el mapa" class="mapa">
-                </div>
-                <div class="col-md-6 text-center">
-                    <a href="presentacion.pdf" class="btn btn-primary btn-descargar" download>Descargar Presentación</a>
+                    <img src="mapa.jpg" alt="Ubicacion en el mapa" class="mapa">
                 </div>
             </div>
         </div>
-    </section>
-
     </section>
 
     <!-- Footer -->

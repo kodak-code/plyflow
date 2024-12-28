@@ -1,14 +1,17 @@
-/* Estilo de la sección de contacto */
 .contacto {
     padding: 60px 20px;
     color: #000;
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 1s ease, transform 1s ease;
 }
 
-.contacto .titulo-contacto {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-    color: #000;
+/* Clase para cuando el contenido es visible y se agranda */
+.contacto.focus-contacto {
+    opacity: 1;
+    transform: scale(1);
 }
+
 
 .contacto .texto-contacto {
     font-size: 1.2rem;

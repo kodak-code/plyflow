@@ -1,3 +1,14 @@
+.testimonios h2 {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+.testimonios h2.animate-text {
+    opacity: 1;
+    transform: translateX(0);
+}
+
 .testimonios {
     padding: 60px 0;
 }
@@ -10,6 +21,14 @@
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.testimonio-card.show-testimonio {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .testimonio-card:hover {

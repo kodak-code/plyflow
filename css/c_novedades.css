@@ -1,3 +1,7 @@
+.swiper-slide {
+    cursor: pointer;
+}
+
 /* Contenedor para las imágenes del libro */
 .contenedor-imagen-libro {
     width: 260px;
@@ -33,7 +37,7 @@
     margin-bottom: 15px;
 }
 
-/* Botón de comprar */
+/* Boton de comprar */
 .btn-comprar {
     background-color: #28a745;
     color: #fff;
@@ -53,4 +57,41 @@
 .tarjeta-libro:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo general para las tarjetas */
+.tarjeta-libro {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.novedades {
+    opacity: 0.2;
+    transition: opacity 5s ease;
+}
+
+/* Clase para cuando la seccion es visible */
+.novedades.visible {
+    opacity: 1;
+}
+
+/* Animacion para desvanecer y deslizar hacia arriba */
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

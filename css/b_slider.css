@@ -5,7 +5,7 @@
 }
 
 .pt-10 {
-    padding-top: 10px !important;
+    padding-top: 20px !important;
 }
 
 .swiper-slide {
@@ -19,7 +19,7 @@
     align-items: center;
 }
 
-/* Botones de navegación */
+/* Botones de navegacion */
 .swiper-button-prev,
 .swiper-button-next {
     background-color: #26598f;
@@ -42,30 +42,6 @@
     margin: 0;
     padding: 15px;
     border-radius: 10px;
-}
-
-/* Estilo general para las tarjetas */
-.tarjeta-libro {
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    background-color: #fff;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 90%;
-    height: auto;
-    margin: 0 auto;
-}
-
-.novedades {
-    opacity: 0.2;
-    transition: opacity 2s ease;
-}
-
-/* Clase para cuando la sección es visible */
-.novedades.visible {
-    opacity: 1;
 }
 
 #carouselExampleIndicators {
@@ -102,9 +78,8 @@
 .carousel-indicators button.active .timer {
     display: block;
     background-color: #007bff;
-    animation: countdown 2s linear infinite;
+    animation: countdown 5s linear infinite;
 }
-
 
 @keyframes countdown {
     0% {
@@ -123,5 +98,67 @@
         background-color: transparent;
         width: 20px;
         height: 20px;
+    }
+}
+
+/* Animacion para el h1 */
+.animate-h1 {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideInFromBottom 1s ease-out forwards;
+    animation-delay: 0.3s;
+}
+
+/* Animacion de deslizamiento del h1 */
+@keyframes slideInFromBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animacion para el parrafo - efecto de escritura */
+.animate-p {
+    opacity: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid #000;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    width: 0;
+    max-width: fit-content;
+    animation: typing 3s steps(30) 1.3s forwards, blinkCaret 0.75s step-end 3s infinite;
+    animation-delay: 1.3s;
+}
+
+/* Animacion de escritura */
+@keyframes typing {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+/* Efecto de parpadeo del cursor */
+@keyframes blinkCaret {
+    0% {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: #000;
+    }
+
+    100% {
+        border-color: transparent;
     }
 }
