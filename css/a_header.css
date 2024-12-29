@@ -5,13 +5,17 @@ nav {
 }
 
 .svg-pequeno {
-    width: 15%;
+    width: 75%;
+    max-width: 80px; /* limita el tamaño máximo del logo */
 }
 
 nav a {
     color: white !important;
 }
-
+.nav-item a{
+    font-family: 'Poppins', sans-serif;
+    font-size: x-large;
+}
 .nav-item a:hover {
     color: #ffcc00;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.348);
@@ -23,9 +27,14 @@ body {
     margin-top: 62px;
 }
 
-
 /* Header */
-.container a {
+.navbar .navbar-expand-lg .bg-opacity-50 .fixed-top .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* distribuye espacio entre logo y botón */
+}
+
+.navbar .navbar-expand-lg .bg-opacity-50 .fixed-top .container a {
     font-family: 'Poppins', sans-serif;
     font-size: x-large;
 }
@@ -36,4 +45,22 @@ body {
 
 .navbar-nav .nav-item:last-child {
     margin-right: 0;
+}
+
+/* Mantén el botón de navegación a la derecha del logo */
+.navbar-toggler {
+    margin-left: auto; /* empuja el botón hacia la derecha */
+}
+
+/* Ajustes responsivos para pantallas menores a 560px */
+@media (max-width: 560px) {
+    .navbar .navbar-expand-lg .bg-opacity-50 .fixed-top .container {
+        flex-wrap: nowrap; /* evita que los elementos salten de línea */
+    }
+    .svg-pequeno {
+        flex-shrink: 0; /* evita que el logo se reduzca demasiado */
+    }
+    ul {
+        text-align: center;
+    }
 }

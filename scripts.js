@@ -138,3 +138,21 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('scroll', focusContacto);
     focusContacto(); // Llama a la funcion inmediatamente
 });
+//Colores
+document.querySelectorAll('.btn-comprar').forEach(button => {
+    button.addEventListener('click', () => {
+        const colorSection = button.nextElementSibling;
+        colorSection.classList.toggle('d-none');
+    });
+});
+
+// Manejar el color con los clicks
+document.querySelectorAll('.color-option').forEach(option => {
+    option.addEventListener('click', () => {
+        const tarjeta = option.closest('.tarjeta-libro');
+        const imagen = tarjeta.querySelector('.imagen-libro');
+        const color = option.getAttribute('data-color');
+        imagen.src = `img/${color}.jpg`;
+        imagen.alt = color;
+    });
+});
